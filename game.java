@@ -1,26 +1,27 @@
-
 /**
  * this is my game of "Prisoners Dilemma"
  * CSC223 Wellington Highschool
  * Hannah Newman
- * 3/07/24
+ * 
+ * 8/07/24
  */
 import java.util.Scanner;
 public class game
 {
         
     {
-        
+        //setting up the scanner 
         Scanner keyboard = new Scanner(System.in);
         
         //intro
         System.out.println("welcome to the prisoners dilemma!");
-        System.out.println("you and your criminal comrade have been caught in the act! you are now facing trial for your alleged crimes.");
+        System.out.println("you and your criminal comrade have been caught in the act! you are now facing trial for your alleged crimes. \n");
         System.out.println("if player 1 stays silent but player 2 testifies, 4 years will be added to players 1's sentence, none added to player 2's");
         System.out.println("if player 2 stays silent but player 1 testifies, 4 years will be added to players 2's sentence, none added to player 1's");
         System.out.println("if both players stay silent, 1 year will be added to both their sentences");
-        System.out.println("if both players testify, 3 years will be added to both their sentences");
+        System.out.println("if both players testify, 3 years will be added to both their sentences \n");
         System.out.println("the player with the loswet sentence wins");
+        
         
         //getting the number of rounds
         System.out.print("enter the number of rounds you want to play");
@@ -51,12 +52,14 @@ public class game
             player1Move = keyboard.nextInt();        
         }
         
+        
+        
         //player 2 decision 
         System.out.println("player 2 choose your move: press 1 to cooperate, 2 to betray");
         int player2Move = keyboard.nextInt();
         while (player2Move != 1 && player2Move != 2) { //if they dont answer 1 or 2
             System.out.println("please give a valid answer.");
-            System.out.println("round " + (round + 1) + " - player 1 choose your move: press 1 to cooperate, 2 to betray");
+            System.out.println("round " + (round + 1) + " - player 2 choose your move: press 1 to cooperate, 2 to betray");
             player2Move = keyboard.nextInt();    
         }
         
